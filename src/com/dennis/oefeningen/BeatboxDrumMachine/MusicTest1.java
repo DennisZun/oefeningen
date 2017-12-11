@@ -8,7 +8,7 @@ import javax.sound.midi.*;
 public class MusicTest1 {
 
     public void play() {
-        Sequencer sequencer = MidiSystem.getSequencer();
+//        Sequencer sequencer = MidiSystem.getSequencer();
 
         System.out.println("We got a sequencer");
     }
