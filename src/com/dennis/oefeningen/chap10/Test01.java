@@ -26,6 +26,28 @@ public class Test01 {
 
         System.out.println(list.size());
         System.out.println(list.get(0));
-        System.out.println(list.get(2));
+//        System.out.println(list.get(2));
+        int berekening = 4/2;
+        System.out.println("berekening: "+ berekening );
+
+        myFunc();
+
+    }
+
+    public static void myFunc() {
+
+        double p = 1.0D;
+        String str = "1.0D";
+        try{
+            p = Double.valueOf(str);
+            return;
+        }
+        catch(Exception ex){
+            System.out.println("Exception Happened");
+//            return;  //return statement here!!!
+        }finally{
+            System.out.println("Finally");
+        }
+        System.out.println("After finally");
     }
 }

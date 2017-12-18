@@ -1,42 +1,31 @@
 package com.dennis.oefeningen.chap11exceptions;
 
-import java.net.SocketPermission;
 
-/**
- * Created by d on 6-2-2017.
- */
 public class TestExceptions {
 
-    public static void main(String[] args) throws ScaryException {
+    public static void main(String[] args) {
 
-        String test = "yes";
-        //try {
+        String test = "yess";
+        try {
             System.out.println("start try");
-            //Thread.sleep(4000);
             doRisky(test);
             System.out.println("end try");
 
-        //}/
-        /*catch (ScaryException se) {
-            System.out.println("scary exceptiondz");
+        } catch ( ScaryException se) {
+            System.out.println("catching ScaryException");
             se.printStackTrace();
-
-
-        }finally {
-            System.out.println("finallydz");
-        }*/
-        System.out.println("end of maindz");
-
+        } finally {
+            System.out.println("finally");
+        }
+        System.out.println("after try catch finally");
     }
 
     static void doRisky(String test) throws ScaryException {
-        System.out.println("start risky");
+        System.out.println("start risky method");
         if ("yes".equals(test)) {
             throw new ScaryException();
         }
         System.out.println("end risky");
         return;
-
     }
-
 }
