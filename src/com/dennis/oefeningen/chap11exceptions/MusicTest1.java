@@ -5,7 +5,12 @@ import javax.sound.midi.*;
 public class MusicTest1 {
 
     public void play() {
-        Sequencer sequencer = MidiSystem.getSequencer();
+        try {
+            Sequencer sequencer = MidiSystem.getSequencer();
+            System.out.println("Succesfully got a sequencer");
+        } catch (MidiUnavailableException e) {
+            System.out.println("bummer");
+        }
         System.out.println("We got a sequencer");
     }
 
