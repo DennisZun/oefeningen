@@ -1,4 +1,4 @@
-//hoort bij chapter 11
+//hoort bij chapter 11.
 
 
 package com.dennis.oefeningen.BeatboxDrumMachine;
